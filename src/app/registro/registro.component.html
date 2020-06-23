@@ -1,0 +1,44 @@
+<div class="section-registro">
+  <div class="box-registro">
+    <form action="#" method="POST">
+      <div class="inputs">
+        <img class="logo"  src="assets/cadastro.png" >
+        <div class="body-input">
+          <div class="label">
+            <label for="cpf">CPF</label>
+          </div>
+          <input class="input input--big" id="cpf" type="text"  [(ngModel)]="usuario.cpf" name="cpf" />
+        </div>
+        <div class="body-input">
+          <div class="label">
+            <label for="name">Nome</label>
+          </div>
+          <input class="input input--big" id="name" type="text" [(ngModel)]="usuario.name" name="name"  />
+        </div>
+        <div class="body-input">
+          <div class="label label--big">
+            <label for="data_nascimento">Data de nascimento</label>
+          </div>
+          <input
+            class="input"
+            type="date"
+            id="data_nascimento"
+            name="data_nascimento"
+            [(ngModel)]="usuario.dtBirth"
+          />
+        </div>
+        <div class="body-input">
+          <div class="label">
+            <label for="password">Senha</label>
+          </div>
+          <input class="input input--big" id="password" type="password" [(ngModel)]="usuario.password" name="password"  />
+        </div>
+      </div>
+      <div class="box-button">
+        <div class="button button--medium" (click)="registrar(usuario)">
+          Cadastrar-se
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

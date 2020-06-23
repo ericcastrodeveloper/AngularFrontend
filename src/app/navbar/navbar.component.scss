@@ -1,0 +1,30 @@
+.nav {
+  background-color: var(--color-114b5f);
+  height: 5.5rem;
+  color: var(--color-f3e9d2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-logo {
+    flex-basis: 10%;
+
+    .logo {
+      margin-left: 3rem;
+      height: 4rem;
+    }
+  }
+
+  &-title {
+    justify-content: center;
+    font-size: 3rem;
+    flex-basis: 30%;
+  }
+
+  &-buttons {
+    flex-basis: 60%;
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+}

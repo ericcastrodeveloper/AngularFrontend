@@ -1,0 +1,37 @@
+.section-veiculo {
+    border-bottom: var(--color-1a936f) solid 7px;
+    border-top: var(--color-88d498) solid 7px;
+    border-left: var(--color-88d498) solid 7px;
+    border-right: var(--color-1a936f) solid 7px;
+    height: 80vh;
+    width: 80%;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+  
+    .box-table-veiculo {
+      width: 100%;
+      height: 100%;
+  
+      .table {
+        width: 100%;
+        height: 100%;
+        background: var(--color-f3e9d2);
+  
+        .th {
+          font-weight: 600;
+          color: var(--color-114b5f);
+        }
+        
+        .td {
+          font-weight: 500;
+          color: var(--color-114b5f);
+        }
+  
+  
+      }
+    }
+  }
+  

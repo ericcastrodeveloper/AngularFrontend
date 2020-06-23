@@ -1,0 +1,30 @@
+<section class="section-login">
+  <div class="box-login">
+    <div class="box-login-header">
+      <img class="logo" src="assets/login.png" alt="" />
+      <div class="title">Seja bem-vindo(a)</div>
+    </div>
+    <div class="box-login-body">
+      <div class="inputs">
+        <div class="body-login-input">
+          <div class="label">
+            <label for="cpf">CPF</label>
+          </div>
+          <input class="input" id="cpf" type="text" [(ngModel)]="login.cpf" name="user" />
+        </div>
+        <div class="body-login-input">
+          <div class="label">
+            <label for="password">Senha</label>
+          </div>
+          <input class="input" id="password" type="password" [(ngModel)]="login.password" />
+        </div>
+      </div>
+    </div>
+    <div class="box-login-footer">
+      <div class="buttons">
+        <div class="button button--medium" (click)="logar(login)">Logar</div>
+        <div class="button button--medium" routerLink="/registro"><a></a>Cadastrar-se</div>
+      </div>
+    </div>
+  </div>
+</section>

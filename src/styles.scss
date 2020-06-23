@@ -1,0 +1,170 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$viagem-fiap-app-primary: mat-palette($mat-indigo);
+$viagem-fiap-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$viagem-fiap-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$viagem-fiap-app-theme: mat-light-theme(
+  $viagem-fiap-app-primary,
+  $viagem-fiap-app-accent,
+  $viagem-fiap-app-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($viagem-fiap-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    var(--color-88d498),
+    var(--color-c6dabf)
+  );
+  background-size: cover;
+}
+
+:root {
+  --color-f3e9d2: #f3e9d2;
+  --color-c6dabf: #c6dabf;
+  --color-88d498: #88d498;
+  --color-1a936f: #1a936f;
+  --color-114b5f: #114b5f;
+}
+
+.button {
+  font-size: 2rem;
+  margin: auto 1rem;
+  align-items: center;
+  display: grid;
+  height: 3rem;
+  background: var(--color-1a936f);
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-f3e9d2);
+  transition: all 0.2s;
+
+  .label {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    background: var(--color-f3e9d2);
+    color: var(--color-1a936f);
+  }
+
+  &--small {
+    width: 11rem;
+  }
+
+  &--medium {
+    width: 14rem;
+  }
+
+  &--big {
+    width: 20rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.suggestions-wrapper {
+  background-color: var(--color-f3e9d2);
+}
+
+.suggestions {
+  list-style: none;
+  pointer-events: none;
+
+  .active {
+    background-color: var(--color-1a936f);
+  }
+}
+
+.mapboxgl-ctrl-geocoder {
+  width: 24rem;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+  height: 100%;
+  background: transparent;
+}
+
+.mat-horizontal-content-container {
+  height: 85%;
+}
+
+.mat-horizontal-stepper-content {
+  height: 100%;
+}
+
+.match-parent {
+  width: 100%;
+  height: 70%;
+}
+
+.mat-step-header {
+  &:hover,
+  &:active,
+  &:link {
+    background: transparent;
+  }
+}
+
+.mat-step-icon {
+  background-color: var(--color-1a936f) !important;
+  color: var(--color-f3e9d2) !important;
+  font-size: 1.2rem;
+}
+
+.mat-step-label {
+  color: var(--color-114b5f) !important;
+  font-weight: 500;
+}
+
+.mat-step-label.mat-step-label-active.mat-step-label-selected {
+  color: var(--color-114b5f) !important;
+  font-weight: 700;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  background-color: var(--color-1a936f) !important;
+  border-color:  var(--color-1a936f) !important;;
+}
+
+.mat-radio-inner-circle {
+  background-color: var(--color-f3e9d2) !important;
+}

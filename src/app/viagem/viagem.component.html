@@ -1,0 +1,29 @@
+<br>
+<br>
+<div class="container">
+        <div class="ui-g-5">
+            <div class="ui-g-12">
+                <h2>Viagens</h2>
+            </div>
+    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Veiculo</th>
+                        <th scope="col">Local Destino</th>
+                        <th scope="col">Local Remetente</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Valor da Viagem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let viagem of viagens">
+                        <th scope="row">{{viagem.id_veiculo}}</th>
+                        <td>{{viagem.id_local_destino}}</td>
+                        <td>{{viagem.id_local_remetente}}</td>
+                        <td>{{viagem.id_usuario}}</td>
+                        <td>{{viagem.valor_viagem}}</td>
+                </tbody>
+            </table>
+        </div>
+    </div>

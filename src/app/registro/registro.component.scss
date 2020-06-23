@@ -1,0 +1,70 @@
+.section-registro {
+  border-bottom: var(--color-1a936f) solid 7px;
+  border-top: var(--color-88d498) solid 7px;
+  border-left: var(--color-88d498) solid 7px;
+  border-right: var(--color-1a936f) solid 7px;
+  height: 80vh;
+  width: 40%;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+
+  .box-registro {
+    height: 50%;
+
+    .inputs {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40rem;
+
+      .logo {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -150%);
+        height: 10rem;
+      }
+
+      .body-input {
+        font-size: 2rem;
+        color: var(--color-114b5f);
+        margin-bottom: 1.5rem;
+        display: flex;
+
+        .input {
+          border-radius: 100px;
+          border: none;
+          height: 2rem;
+          width: 25rem;
+
+          &--big {
+            width: 85%;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .label {
+          width: 7rem;
+
+          &--big {
+            width: 25rem;
+          }
+        }
+      }
+    }
+
+    .box-button {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

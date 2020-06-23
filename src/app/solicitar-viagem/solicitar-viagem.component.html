@@ -1,0 +1,75 @@
+<div class="section-solicitar-viagem">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step label="Escolha o destino">
+      <div class="maps" id="map" class="match-parent"></div>
+      <div class="box">
+        <div class="box-title">
+          <h1>Destino: {{ destino }}</h1>
+        </div>
+        <div *ngIf="temDestino" class="box-button">
+          <div class="button button--medium" (click)="solicitarCarro()">
+            Pedir carro
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step label="Escolha seu carro">
+      <div class="box-carros">
+        <div class="table-carros">
+          <mat-radio-group>
+            <mat-card class="card" *ngFor="let veiculo of veiculos">
+              <mat-radio-button
+                [value]="veiculo"
+                (click)="selecionarVeiculo(veiculo)"
+                >{{ veiculo.model }} - {{ veiculo.year }} : Placa {{ veiculo.plate }}
+              </mat-radio-button>
+            </mat-card>
+          </mat-radio-group>
+        </div>
+        <div *ngIf="temCarro" class="box-button">
+          <div class="button button--big" (click)="confirmarCarro()">
+            Confirmar carro
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step label="Aguarde seu carro">
+      <div class="box-aguarde">
+        <div class="mensagem">
+          {{ contagemRegressiva }}
+        </div>
+        <div class="mensagem-aguarde">
+          Seu veiculo está chegando, por gentileza, aguarde no local atual.
+        </div>
+        <mat-progress-bar class="progress" mode="determinate" [value]="progressbarValue" bufferValue=50></mat-progress-bar>
+      </div>
+    </mat-step>
+    <mat-step label="No trajeto">
+      <div class="box-trajeto">
+        <div class="mensagem">
+          <iframe
+            src="https://giphy.com/embed/Y1ggBG6wpBdwA"
+            width="480"
+            height="300"
+            frameBorder="0"
+            class="gif"
+          ></iframe>
+        </div>
+        <mat-progress-bar class="progress" mode="determinate" [value]="progressbarValue2" bufferValue=50></mat-progress-bar>
+      </div>
+    </mat-step>
+    <mat-step label="Viagem finalizada">
+      <div class="box-final">
+        <img src="assets/final.png" class="logo">
+        <div class="mensagem">
+          Obrigado!
+        </div>
+        <div class="box-button">
+          <div class="button button--medium" (click)="finalizar()">
+            Finalizar
+          </div>
+        </div>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
